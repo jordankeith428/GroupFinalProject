@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <body>
+  <div id="w">
+    <header id="title">
+      <h1>Shoe Shack Shopping Cart!</h1>
+    </header>
+    <div id="page">
+      <table id="cart">
+        <thead>
+          <tr>
+            <th class="first">Item</th>
+            <th class="second">Qty</th>
+            <th class="third">Product</th>
+            <th class="fourth">Line Total</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- shopping cart contents -->
+          <tr class="productitm">
+            <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
+            <td><img src="data:image/jpeg;base64,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"" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Design Bundle Package</td>
+            <td>$79.00</td>
+            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+            <!-- http://www.amazon.com/Stuff-My-Cat-The-Book/dp/0811855384 -->
+            <td><img src="https://i.imgur.com/RkzoXzZ.png" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Stuff on my Cat: The Book</td>
+            <td>$8.95</td>
+            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+            <!-- http://www.amazon.com/SpongeBob-SquarePants-The-First-Episodes/dp/B002DYJTVW -->
+            <td><img src="https://i.imgur.com/vZ26Uwy.png" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>SpongeBob's First 100 Episodes</td>
+            <td>$75.00</td>
+            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+            <!-- http://www.barnesandnoble.com/w/javascript-and-jquery-david-sawyer-mcfarland/1100405042 -->
+            <td><img src="https://i.imgur.com/tEdRnz4.png" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>JavaScript &amp; jQuery: The Missing Manual</td>
+            <td>$27.50</td>
+            <td><span class="remove"><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
+          </tr>
+          
+          <!-- tax + subtotal -->
+          <tr class="extracosts">
+            <td class="light">Shipping &amp; Tax</td>
+            <td colspan="2" class="light"></td>
+            <td>$35.00</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="totalprice">
+            <td class="light">Total:</td>
+            <td colspan="2">&nbsp;</td>
+            <td colspan="2"><span class="thick">$225.45</span></td>
+          </tr>
+          
+          <!-- checkout btn -->
+          <tr class="checkoutrow">
+            <td colspan="5" class="checkout"><button id="submitbtn">Checkout Now!</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <script>
+      	// ***************************************************
+
+// Shopping Cart functions
+
+
+
+var shoppingCart = (function() {
+
+// Private methods and properties
+
+var cart = [];
+
+
+
+function Item(name, price, count) {
+
+this.name = name
+
+this.price = price
+
+this.count = count
+
+}
+
+
+
+function saveCart() {
+
+localStorage.setItem("shoppingCart", JSON.stringify(cart));
+
+}
+
+
+
+function loadCart() {
+
+cart = JSON.parse(localStorage.getItem("shoppingCart"));
+
+if (cart === null) {
+
+cart = []
+
+}
+
+}
+
+
+
+loadCart();
+
+
+
+
+
+
+
+// Public methods and properties
+
+var obj = {};
+
+
+
+obj.addItemToCart = function(name, price, count) {
+
+for (var i in cart) {
+
+if (cart[i].name === name) {
+
+cart[i].count += count;
+
+saveCart();
+
+return;
+
+}
+
+}
+
+
+
+console.log("addItemToCart:", name, price, count);
+
+
+
+var item = new Item(name, price, count);
+
+cart.push(item);
+
+saveCart();
+
+};
+
+
+
+obj.setCountForItem = function(name, count) {
+
+for (var i in cart) {
+
+if (cart[i].name === name) {
+
+cart[i].count = count;
+
+break;
+
+}
+
+}
+
+saveCart();
+
+};
+
+
+
+
+
+obj.removeItemFromCart = function(name) { // Removes one item
+
+for (var i in cart) {
+
+if (cart[i].name === name) { // "3" === 3 false
+
+cart[i].count--; // cart[i].count --
+
+if (cart[i].count === 0) {
+
+cart.splice(i, 1);
+
+}
+
+break;
+
+}
+
+}
+
+saveCart();
+
+};
+
+
+
+
+
+obj.removeItemFromCartAll = function(name) { // removes all item name
+
+for (var i in cart) {
+
+if (cart[i].name === name) {
+
+cart.splice(i, 1);
+
+break;
+
+}
+
+}
+
+saveCart();
+
+};
+
+
+
+
+
+obj.clearCart = function() {
+
+cart = [];
+
+saveCart();
+
+}
+
+
+
+
+
+obj.countCart = function() { // -> return total count
+
+var totalCount = 0;
+
+for (var i in cart) {
+
+totalCount += cart[i].count;
+
+}
+
+
+
+return totalCount;
+
+};
+
+
+
+obj.totalCart = function() { // -> return total cost
+
+var totalCost = 0;
+
+for (var i in cart) {
+
+totalCost += cart[i].price * cart[i].count + 0.075;
+
+}
+
+return totalCost.toFixed(2);
+
+};
+
+
+
+obj.checkout = function() {
+
+if (totalCart >= 100) {
+
+alert("You Must use Credit")
+
+} else
+
+alert("You must use Cash")
+
+
+
+}
+
+obj.listCart = function() { // -> array of Items
+
+var cartCopy = [];
+
+console.log("Listing cart");
+
+console.log(cart);
+
+for (var i in cart) {
+
+console.log(i);
+
+var item = cart[i];
+
+var itemCopy = {};
+
+for (var p in item) {
+
+itemCopy[p] = item[p];
+
+}
+
+itemCopy.total = (item.price * item.count + 0.075).toFixed(2);
+
+cartCopy.push(itemCopy);
+
+}
+
+return cartCopy;
+
+};
+
+
+
+// ----------------------------
+
+return obj;
+
+})();
+      </script>
+    </div>
+  </div>
+</body>
+  
+  
+</body>
+</html>
